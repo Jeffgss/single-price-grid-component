@@ -1,0 +1,185 @@
+body {
+  background: var(--light-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.cards {
+  width: 45%;
+  display: grid;
+  border-radius: 8px;
+  grid-template-rows: 0.9fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "join join"
+    "subscription whyus";
+
+  box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cards .card-join {
+  padding: 30px;
+  grid-area: join;
+  background: white;
+  border-radius: 8px 8px 0 0;
+}
+
+.cards .card-join h1 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--cyan);
+}
+
+.cards .card-join h2 {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--bright-yellow);
+  margin: 15px auto 10px auto;
+}
+
+.cards .card-join p {
+  font-size: 14px;
+  color: var(--grayish-blue);
+  line-height: 1.5;
+}
+
+.cards .card-subscription {
+  padding: 30px;
+  grid-area: subscription;
+  background: var(--cyan);
+  color: white;
+  border-radius: 0 0 0 8px;
+}
+
+.cards .card-subscription h2 {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.cards .card-subscription h3 {
+  font-size: 24px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  margin: 10px auto 8px auto;
+}
+
+.cards .card-subscription h3 span {
+  font-size: 14px;
+  margin-left: 5px;
+  color: var(--light-gray);
+}
+
+.cards .card-subscription p {
+  font-size: 14px;
+}
+
+.cards .card-subscription button {
+  background: var(--bright-yellow);
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 4px;
+  margin: 25px auto auto auto;
+  width: 96%;
+  padding: 10px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1), 0 6px 15px 0 rgba(0, 0, 0, 0.1);
+}
+
+.cards .card-whyus {
+  padding: 30px;
+  background: #4abebc;
+  border-radius: 0 0 8px 0;
+}
+
+.cards .card-whyus h2 {
+  font-weight: 700;
+  color: white;
+}
+
+.cards .card-whyus ul {
+  list-style-type: none;
+  margin-top: 10px;
+}
+
+.cards .card-whyus ul li {
+  font-size: 14px;
+  color: var(--light-gray);
+}
+
+@media (max-width: 907px) {
+  .cards {
+    width: 250px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.8fr 1fr;
+    grid-template-areas:
+      "join"
+      "subscription"
+      "whyus";
+  }
+
+  .cards .card-join {
+    padding: 20px;
+    grid-area: join;
+    border-radius: 4px 4px 0 0;
+  }
+
+  .cards .card-join h1 {
+    font-size: 15px;
+  }
+
+  .cards .card-join h2 {
+    font-size: 13px;
+  }
+
+  .cards .card-join p {
+    font-size: 12px;
+  }
+
+  .cards .card-subscription {
+    padding: 20px;
+    grid-area: subscription;
+    border-radius: 0;
+  }
+
+  .cards .card-subscription h2 {
+    font-size: 15px;
+  }
+
+  .cards .card-subscription h3 {
+    font-size: 24px;
+    margin: 15px auto 8px auto;
+  }
+
+  .cards .card-subscription h3 span {
+    font-size: 12px;
+  }
+
+  .cards .card-subscription p {
+    font-size: 13px;
+  }
+
+  .cards .card-whyus {
+    padding: 20px;
+    grid-area: whyus;
+    border-radius: 0 0 4px 4px;
+  }
+
+  .cards .card-whyus h2 {
+    font-size: 15px;
+  }
+
+  .cards .card-whyus ul {
+    margin-top: 15px;
+  }
+
+  .cards .card-whyus ul li {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+}
